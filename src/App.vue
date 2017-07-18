@@ -219,7 +219,7 @@ body {
     }
   }
   .bg {
-    background: url('//img.alicdn.com/tps/TB1qq7kNXXXXXacXFXXXXXXXXXX-400-186.png') no-repeat;
+    background: url("./assets/image.png") no-repeat;
     overflow: hidden;
   }
 }
