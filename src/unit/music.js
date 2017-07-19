@@ -1,4 +1,4 @@
-import store from '../vuex/store'
+import store from '../vuex'
 // 使用 Web Audio API
 const AudioContext =
   window.AudioContext ||

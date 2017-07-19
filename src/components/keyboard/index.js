@@ -1,6 +1,6 @@
 import Vbutton from './button/index.vue'
 import { i18n, lan } from '../../unit/const'
-import store from '../../vuex/store'
+import store from '../../vuex/'
 import todo from '../../control/todo'
 export default {
   props: ['filling'],

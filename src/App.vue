@@ -169,9 +169,10 @@ export default {
 body {
   padding: 0;
   margin: 0;
-  font: 20px/1 "HanHei SC", "PingHei", "PingFang SC", "STHeitiSC-Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "HanHei SC", "PingHei", "PingFang SC", "STHeitiSC-Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 20px/1;
+  background-color: #0bf;
   overflow: hidden;
-  cursor: default;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

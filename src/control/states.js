@@ -1,4 +1,4 @@
-import store from '../vuex/store'
+import store from '../vuex'
 import { want, isClear, isOver } from '../unit/'
 import {
   speeds,

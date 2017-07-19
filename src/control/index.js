@@ -1,4 +1,4 @@
-import store from '../vuex/store'
+import store from '../vuex'
 import todo from './todo'
 
 const keyboard = {

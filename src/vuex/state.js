@@ -1,12 +1,8 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
 import { getNextType } from '../unit'
-import mutations from './mutations'
 import { isFocus } from '../unit/'
 import { blankMatrix, lastRecord, maxPoint, blockType } from '../unit/const'
 import Block from '../unit/block'
 import { hasWebAudioAPI } from '../unit/music'
-Vue.use(Vuex)
 
 let clearLinesInitState = lastRecord &&
   !isNaN(parseInt(lastRecord.clearLines, 10))
@@ -101,7 +97,8 @@ if (startLinesInitState < 0 || startLinesInitState > 10) {
 const resetInitState = lastRecord && lastRecord.reset
   ? !!lastRecord.reset
   : false
-const state = {
+
+export default {
   music: musicInitState,
   pause: pauseInitState,
   matrix: matrixInitState,
@@ -130,9 +127,3 @@ const state = {
   lock: lockInitState,
   focus: isFocus()
 }
-export default new Vuex.Store({
-  state,
-  // getters,
-  // actions,
-  mutations
-})
