@@ -1,4 +1,6 @@
 import store from '../vuex'
+import mp3 from '@/assets/mp3.js'
+
 // 使用 Web Audio API
 const AudioContext =
   window.AudioContext ||
@@ -16,15 +18,13 @@ export const music = {}
   if (!hasWebAudioAPI.data) {
     return
   }
-  const url = './static/music.mp3'
   const context = new AudioContext()
-  const req = new XMLHttpRequest()
-  req.open('GET', url, true)
-  req.responseType = 'arraybuffer'
 
-  req.onload = () => {
+  const reader = new FileReader()
+
+  reader.onload = () => {
     context.decodeAudioData(
-      req.response,
+      reader.result,
       buf => {
         // 将拿到的audio解码转为buffer
         const getSource = () => {
@@ -91,12 +91,11 @@ export const music = {}
       },
       error => {
         if (window.console && window.console.error) {
-          window.console.error(`音频: ${url} 读取错误`, error)
+          window.console.error(`音频: 读取错误`, error)
           hasWebAudioAPI.data = false
         }
       }
     )
   }
-
-  req.send()
+  reader.readAsArrayBuffer(mp3)
 })()
