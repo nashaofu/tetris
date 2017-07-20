@@ -10,7 +10,7 @@ const AudioContext =
   window.msAudioContext
 
 export const hasWebAudioAPI = {
-  data: !!AudioContext && location.protocol.indexOf('http') !== -1
+  data: !!AudioContext
 }
 
 export const music = {}
